@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply font-sans antialiased;
+  }
+}
+
+@layer components {
+  .glass {
+    background: rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+  }
+
+  .dark .glass {
+    background: rgba(30, 41, 59, 0.4);
+    border: 1px solid rgba(51, 65, 85, 0.5);
+  }
+
+  .sidebar-link {
+    @apply flex items-center px-4 py-3 rounded-lg transition-all duration-200 font-medium text-slate-600;
+  }
+
+  .sidebar-link:hover,
+  .sidebar-link.active {
+    @apply bg-teal-50 text-teal-700;
+  }
+
+  .dark .sidebar-link {
+    @apply text-slate-400;
+  }
+
+  .dark .sidebar-link:hover,
+  .dark .sidebar-link.active {
+    @apply bg-teal-500/10 text-teal-400;
+  }
+
+  .sidebar-link i {
+    @apply mr-3;
+  }
+
+  .input-field {
+    @apply w-full px-3 py-2 bg-slate-100 dark:bg-slate-700 border border-slate-300 dark:border-slate-600 rounded-md outline-none transition-all duration-200;
+  }
+
+  .input-field:focus {
+    @apply border-teal-500 ring-2 ring-teal-500/40;
+  }
+
+  .btn-primary {
+    @apply px-4 py-2 bg-teal-600 text-white font-semibold rounded-md transition-colors hover:bg-teal-700;
+  }
+
+  .btn-danger {
+    @apply px-4 py-2 bg-red-600 text-white font-semibold rounded-md transition-colors hover:bg-red-700;
+  }
+
+  .btn-success {
+    @apply px-4 py-2 bg-green-600 text-white font-semibold rounded-md transition-colors hover:bg-green-700;
+  }
+
+  .role-select-btn {
+    @apply flex flex-col items-center justify-center px-2 py-3 rounded-lg border-2 border-slate-300 bg-slate-50 text-slate-600 font-medium transition-all duration-200 text-center min-h-[80px];
+  }
+
+  .role-select-btn i {
+    @apply mb-2;
+  }
+
+  .role-select-btn:hover {
+    @apply border-teal-500 bg-teal-50 text-teal-700;
+  }
+
+  .role-select-btn.selected {
+    @apply border-teal-600 bg-teal-50 text-teal-700 ring-4 ring-teal-600/40;
+  }
+
+  .dark .role-select-btn {
+    @apply bg-slate-700 border-slate-600 text-slate-300;
+  }
+
+  .dark .role-select-btn:hover {
+    @apply border-teal-500 bg-teal-500/10 text-teal-400;
+  }
+
+  .dark .role-select-btn.selected {
+    @apply border-teal-600 bg-teal-500/10 text-teal-400 ring-4 ring-teal-600/40;
+  }
+}
+
