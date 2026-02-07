@@ -2,6 +2,9 @@
 
 A comprehensive timetable scheduling application for educational institutions built with React, Vite, and Tailwind CSS.
 
+## Live Demo
+https://schedulify-app-olive.vercel.app/
+
 ## Features
 
 - **Multi-Role Support**: Admin, HOD, Teacher, and Student roles with different access levels
